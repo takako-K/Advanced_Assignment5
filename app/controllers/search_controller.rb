@@ -16,7 +16,7 @@ class SearchController < ApplicationController
     end
   end
 
-  def forward(mode, value)
+  def forward(model, value)
     if model == 'user'
       User.where("name LIKE ?", "#{value}%")
     elsif model == 'book'
